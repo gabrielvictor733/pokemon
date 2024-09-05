@@ -12,3 +12,9 @@ function pokeBusca(){
     })
     .catch(error => console.log(error));
 }
+document.getElementById('nome').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); 
+        pokeBusca();
+    }
+});
